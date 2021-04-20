@@ -1,0 +1,39 @@
+<div class="animate__animated animate__fadeIn animate__faster">
+  <h2>Por Pais</h2>
+  <hr>
+  <div class="row">
+    <div class="col-12">
+      <app-search
+       (dataSearch)="buscar($event)" 
+       (onDebounce)="sugerencias($event)"
+        placeholder="Buscar por pais">
+      </app-search>
+    </div>
+  </div>
+</div>
+<app-sugerencia
+   [dataSugerida]="dataSugerida"
+   [termino]="termino"
+   [mostrarSugerido]="mostrarSugerido" 
+   (onTerminoBuscar)="buscar($event)" >
+  </app-sugerencia>
+<hr>
+<div class="row">
+    <app-errores 
+    [termino]="termino"
+     [error]="error">
+    </app-errores>
+  <div class="col">
+    <app-datetable *ngIf="data !=null" [dataCountry]="data">
+      <thead id="thead">
+        <tr>
+          <th>#</th>
+          <th>Bandera</th>
+          <th>Nombre</th>
+          <th>Población</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+    </app-datetable>
+  </div>
+</div>

@@ -1,14 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { QuicklinkModule } from 'ngx-quicklink';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app.routing';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    CoreModule,
+    SharedModule,
+    QuicklinkModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

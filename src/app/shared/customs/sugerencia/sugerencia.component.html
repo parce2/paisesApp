@@ -1,0 +1,8 @@
+<ul *ngIf="mostrarSugerido" class="list-group">
+  <li *ngFor="let item of dataSugerida" class="list-group-item list-group-item-action">
+    <a  class="nav-link" [routerLink]="[ '/Dashboard/pais/', item.alpha2Code ]">   {{item.name}}</a>
+  </li>
+  <li class="list-group-item list-group-item-action">
+    <a class="nav-link" (click)="buscar(termino)">Buscar "{{termino}}" </a>
+  </li>
+</ul>

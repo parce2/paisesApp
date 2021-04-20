@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  API: 'https://restcountries.eu/rest/v2',
+  FILTER: '?fields=name;capital;alpha2Code;flag;population'
 };
 
 /*

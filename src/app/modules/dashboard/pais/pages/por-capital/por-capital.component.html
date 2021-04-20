@@ -1,0 +1,25 @@
+<div  class="animate__animated animate__fadeIn animate__faster">
+<h2>Por Capital</h2>
+<hr>
+<div class="row">
+  <div class="col-12">
+    <app-search (onDebounce)="buscar($event)" placeholder="Buscar por Capital"></app-search>
+  </div>
+</div>
+</div>
+<hr>
+<app-errores [termino]="termino" [error]="error"></app-errores>
+<div class="row">
+  <div class="col">
+    <app-datetable *ngIf="data !=null" [dataCountry]="data">
+      <thead id="thead">
+        <tr>
+          <th>#</th>
+          <th>Bandera</th>
+          <th>Nombre Capital</th>
+          <th>Población</th>
+        </tr>
+      </thead>
+    </app-datetable>
+  </div>
+</div>
